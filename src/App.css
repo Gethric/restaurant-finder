@@ -1,14 +1,14 @@
 .App {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 }
 
 .screenleft {
 	float: left;
-	width: 50vw;
+	width: 35vw;
 }
 
 .screenright {
 	float: right;
-	width: 50vw;
+	width: 65vw;
 }

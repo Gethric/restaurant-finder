@@ -11,8 +11,8 @@ class App extends React.Component {
 			search: "",
 			venues: [],
 			viewport: {
-				width: "100vw",
-				height: "100vh",
+				width: "65vw",
+				height: "75vh",
 				zoom: 12
 			}
 		};
