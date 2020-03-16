@@ -4,11 +4,15 @@
 }
 
 .screenleft {
+	display: flex;
+	flex-direction: column;
 	float: left;
 	width: 35vw;
 }
 
 .screenright {
+	display: flex;
+	flex-direction: row;
 	float: right;
 	width: 65vw;
 }

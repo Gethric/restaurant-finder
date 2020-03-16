@@ -12,7 +12,7 @@ class App extends React.Component {
 			venues: [],
 			viewport: {
 				width: "65vw",
-				height: "75vh",
+				height: "100vh",
 				zoom: 12
 			}
 		};
