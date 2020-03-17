@@ -6,13 +6,13 @@
 .screenleft {
 	display: flex;
 	flex-direction: column;
-	float: left;
+
 	width: 35vw;
 }
 
 .screenright {
-	display: flex;
-	flex-direction: row;
-	float: right;
+	height: 300px;
+	width: 200px;
+
 	width: 65vw;
 }
