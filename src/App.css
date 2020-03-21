@@ -1,18 +1,25 @@
+@import "./Sass/constants.styles.scss";
+
 .App {
+	position: fixed;
 	display: flex;
 	flex-direction: row;
 }
 
-.screenleft {
+.screen-left {
+	z-index: 1;
 	display: flex;
 	flex-direction: column;
-
 	width: 35vw;
+	height: 100vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	background-color: rgb(120, 30, 30);
+	font-family: Berton Voyage;
 }
 
-.screenright {
-	height: 300px;
-	width: 200px;
-
+.screen-right {
+	z-index: 0;
 	width: 65vw;
+	height: 100vh;
 }

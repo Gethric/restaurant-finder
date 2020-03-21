@@ -4,22 +4,17 @@ import "./search.styles.scss";
 const Search = props => {
 	return (
 		<div className="search">
-			<div className="tb">
-				<div className="td">
-					<input
-						type="text"
-						name="search"
-						placeholder="Find food!"
-						value={props.state.name}
-						onChange={props.handleChange}
-					/>
-				</div>
-				<div className="td" id="s-cover">
-					<button onClick={props.onClick}>
-						<div id="s-circle"></div>
-						<span></span>
-					</button>
-				</div>
+			<div className="text-input">
+				<input
+					type="text"
+					name="search"
+					placeholder="Search for type of food you fancy"
+					value={props.state.name}
+					onChange={props.handleChange}
+				/>
+			</div>
+			<div className="search-button">
+				<button onClick={props.onClick}>GO!</button>
 			</div>
 		</div>
 	);

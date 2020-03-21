@@ -41,16 +41,21 @@ class App extends React.Component {
 		const secret = "PZTEZQURLCAUBBUE0LLNSMFDXO2TLT3RDSW1H0TAKUMOSRLB";
 		const lat = this.state.coords.latitude;
 		const lon = this.state.coords.longitude;
-		fetch(
-			`https://api.foursquare.com/v2/venues/search?client_id=${id}&client_secret=${secret}&v=20180323&limit=10&ll=${lat},${lon}&query=${this.state.search}`
-		)
-			.then(res => res.json())
-			.then(data => {
-				this.setState({
-					venues: data.response.venues
-				});
-			})
-			.catch(console.log);
+
+		if (this.state.search) {
+			fetch(
+				`https://api.foursquare.com/v2/venues/search?client_id=${id}&client_secret=${secret}&v=20180323&limit=10&ll=${lat},${lon}&query=${this.state.search}`
+			)
+				.then(res => res.json())
+				.then(data => {
+					this.setState({
+						venues: data.response.venues
+					});
+				})
+				.catch(console.log);
+		} else {
+			alert("Your search is empty!");
+		}
 	};
 
 	componentDidMount() {
@@ -67,7 +72,7 @@ class App extends React.Component {
 		console.log(this.state);
 		return (
 			<div className="App">
-				<div className="screenleft">
+				<div className="screen-left">
 					<Search
 						handleChange={this.handleChange}
 						onClick={this.onClick}
@@ -77,7 +82,7 @@ class App extends React.Component {
 						<List venues={this.state.venues} />
 					) : null}
 				</div>
-				<div className="screenright">
+				<div className="screen-right">
 					{this.state.coords ? <ReactMapContainer props={this.state} /> : null}
 				</div>
 			</div>
